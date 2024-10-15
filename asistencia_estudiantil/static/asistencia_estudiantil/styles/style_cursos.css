@@ -1,0 +1,120 @@
+header {
+    width: 100%;
+    background-color: #FFFF00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+.curso-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.curso-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: black;
+}
+
+.curso-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.curso-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #FFFF00;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #FFD700;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.action-button {
+    padding: 15px 30px;
+    background-color: #FFFF00;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.action-button:hover {
+    background-color: #FFD700;
+}
+
+#buscador {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#buscador a {
+    padding: 12px 20px;
+    background-color: #FFFF00;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#buscador a:hover {
+    background-color: #FFD700;
+}

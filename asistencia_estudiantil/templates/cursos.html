@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'asistencia_estudiantil/styles/style_cursos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, {{ username }}</h1>
+    </header>
+
+    <h1 style="text-align: center;">Cursos Disponibles</h1>
+    
+    <form id= "buscador" method="get" action="">
+        <input type="text" name="search" placeholder="Buscar por nombre o código" value="{{ query }}" required>
+        <button type="submit">Buscar</button>
+        <a href="{% url 'cursos' %}">Ver todos los cursos</a>
+    </form>
+
+    <div class="curso-container">
+        {% for curso in cursos %}
+        <div class="curso-item" onclick="location.href='{% url 'curso' curso.codigo_curso %}'" style="cursor: pointer;">
+            <h2>{{ curso.nombre_curso }} ({{ curso.codigo_curso }})</h2>
+        </div>
+        {% empty %}
+            <p>No se encontraron cursos.</p>
+        {% endfor %}
+    </div>
+
+    <div class="button-container">
+        <form method="post" action="{% url 'historial' %}">
+            {% csrf_token %}
+            <button type="submit" class="action-button">Ver historial de asistencia</button>
+        </form>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="action-button">Cerrar sesión</button>
+        </form>
+    </div>
+</body>
+
