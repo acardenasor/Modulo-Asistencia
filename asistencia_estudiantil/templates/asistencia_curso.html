@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia para {{ curso.nombre_curso }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'asistencia_estudiantil/styles/style_asistencia_curso.css' %}">
+    <script>
+        function validarFormulario(event) {
+            const fechaInput = document.querySelector('input[name="fecha"]');
+            const radios = document.querySelectorAll('input[type="radio"]:checked');
+            const estudiantesCount = document.querySelectorAll('input[type="radio"]').length / 2;
+            const errorMessage = document.querySelector('.error-message');
+            const submitButton = document.querySelector('.submit-button');
+
+            if (!fechaInput.value) {
+                event.preventDefault();
+                alert("Debes seleccionar una fecha.");
+                return;
+            }
+
+            if (radios.length !== estudiantesCount) {
+                event.preventDefault();
+                alert("Debes marcar 'Presente' o 'Ausente' para cada estudiante.");
+                return;
+            }
+        }
+
+        function verificarFecha() {
+            const fechaInput = document.querySelector('input[name="fecha"]');
+            const errorMessage = document.querySelector('.error-message');
+            const submitButton = document.querySelector('.submit-button');
+            const codigoCurso = '{{ curso.codigo_curso }}';
+            
+            errorMessage.textContent = '';
+
+            if (fechaInput.value) {
+                fetch(`/verificar_asistencia/?fecha=${fechaInput.value}&codigo_curso=${codigoCurso}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.existe) {
+                            errorMessage.textContent = 'Ya se ha registrado la asistencia para esta fecha.';
+                            submitButton.disabled = true;
+                        } else {
+                            errorMessage.textContent = ''; 
+                            submitButton.disabled = false; 
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            } else {
+                submitButton.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, {{ username }}</h1>
+    </header>
+
+    <div class="title-container">
+        <form method="post" action="{% url 'curso' curso.codigo_curso %}" class="volver-form">
+            {% csrf_token %}
+            <button type="submit" class="volver-button">Volver a curso</button>
+        </form>
+        <h1 class="asistencia-title">Asistencia para {{ curso.nombre_curso }}</h1>
+    </div>
+
+    <form method="POST" class="asistencia-form" onsubmit="validarFormulario(event)">
+        {% csrf_token %}
+        <label for="fecha" class="fecha-label">Escoge una fecha:</label>
+        <input type="date" name="fecha" value="{{ today }}" class="date-input" required onchange="verificarFecha()" />
+
+        <table class="estudiantes-table">
+            <thead>
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Presente</th>
+                    <th>Ausente</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estudiante in estudiantes %}
+                <tr>
+                    <td>{{ estudiante.nombre }}</td>
+                    <td>
+                        <input type="radio" name="asistencia_{{ estudiante.id_estudiante }}" value="Presente" required> Presente
+                    </td>
+                    <td>
+                        <input type="radio" name="asistencia_{{ estudiante.id_estudiante }}" value="Ausente"> Ausente
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if error %}
+        <div class="error-message" style="color: red;">{{ error }}</div>
+        <script>
+            document.getElementById('registrar').disabled = true;
+        </script>
+        {% endif %}
+
+        <button type="submit" id="registrar" class="submit-button">Registrar Asistencia</button>
+    </form>
+</body>
+</html>

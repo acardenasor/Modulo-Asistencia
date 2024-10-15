@@ -1,0 +1,154 @@
+body {
+    background-color: #000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: #FFFF00;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    color: black;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.volver-form {
+    margin-right: 20px;
+}
+
+.volver-button {
+    padding: 10px 20px;
+    background-color: #FFFF00;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.volver-button:hover {
+    background-color: #FFD700;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.asistencia-form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+}
+
+.estudiantes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.estudiante-item {
+    margin: 10px 0;
+    color: white;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #FFFF00;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #FFD700;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    background-color: #444;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+}
+
+.estudiantes-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.estudiantes-table th, .estudiantes-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.estudiantes-table th {
+    background-color: #333;
+    color: white;
+}
+
+.estudiantes-table td {
+    background-color: #444;
+    color: white;
+}
+
+.fecha-label {
+    color: white;
+    margin: 10px;
+}
+
+.buscador-fecha-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
