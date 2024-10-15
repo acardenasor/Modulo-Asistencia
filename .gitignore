@@ -1,0 +1,54 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+/env
+/.env
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Archivos de compilación
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Otros archivos
+*.DS_Store
+*.coverage
+.coverage.*
+.cache
+nosetests.xml
+test.xml
+coverage.xml
+*.mo
+*.pot
+*.orig
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# Archivos de configuración de la base de datos
+*.db
+
+# Configuraciones específicas de OS
+Thumbs.db
+ehthumbs.db
+Icon?
