@@ -76,10 +76,18 @@ Si necesitas acceso al panel de administración de Django, crea un superusuario:
 ```bash
 python manage.py createsuperuser
 ```
-O usar el superusuario existente
+O usar el superusuario existente:
 ```bash
 username: admin
 password: admin2024
+```
+O usar los usuarios asistentes existentes:
+```bash
+username: asistente1
+password: Asist12024
+
+username: asistente2
+password: Asist22024
 ```
 
 ### 7. Ejecutar el servidor de desarrollo
