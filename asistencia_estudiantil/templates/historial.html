@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Asistencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'asistencia_estudiantil/styles/style_historial.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, {{ username }}</h1>
+    </header>
+
+    <div class="title-container">
+        <form method="post" action="{% url 'cursos' %}" class="volver-form">
+            {% csrf_token %}
+            <button type="submit">Volver a lista de cursos</button>
+        </form>
+        <h1 class="historial-title">Historial de Asistencia</h1>
+    </div>
+
+    <form id="filterForm" method="GET" class="filter-form">
+        <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="">Todos</option>
+            {% for curso in cursos %}
+            <option value="{{ curso.codigo_curso }}" {% if request.GET.curso == curso.codigo_curso %}selected{% endif %}>
+                {{ curso.nombre_curso }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label for="estudiante">Estudiante:</label>
+        <select name="estudiante" id="estudiante">
+            <option value="">Todos</option>
+            {% for estudiante in estudiantes %}
+            <option value="{{ estudiante.id_estudiante }}" {% if request.GET.estudiante == estudiante.id_estudiante %}selected{% endif %}>
+                {{ estudiante.nombre }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <select name="fecha" id="fecha">
+            <option value="">Todas</option>
+            {% for fecha in fechas %}
+            <option value="{{ fecha|date:'Y-m-d' }}" {% if request.GET.fecha == fecha|date:'Y-m-d' %}selected{% endif %}>
+                {{ fecha|date:'Y-m-d' }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+            <option value="">Todos</option>
+            <option value="Presente" {% if request.GET.estado == "Presente" %}selected{% endif %}>Presente</option>
+            <option value="Ausente" {% if request.GET.estado == "Ausente" %}selected{% endif %}>Ausente</option>
+        </select>
+
+        <button type="submit">Filtrar</button>
+    </form>
+
+    {% if asistencias %}
+    <table>
+        <tr>
+            <th>Curso</th>
+            <th>Estudiante</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+        </tr>
+        {% for asistencia in asistencias %}
+        <tr>
+            <td>{{ asistencia.estudiante.curso.nombre_curso }}</td>
+            <td>{{ asistencia.estudiante.nombre }}</td>
+            <td>{{ asistencia.fecha|date:"Y-m-d" }}</td>
+            <td>{{ asistencia.estado_asistencia }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No hay datos para esta búsqueda</p>
+    {% endif %}
+</body>
+</html>

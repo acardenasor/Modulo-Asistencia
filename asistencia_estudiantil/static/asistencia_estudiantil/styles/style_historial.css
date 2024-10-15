@@ -1,0 +1,108 @@
+body {
+    background-color: #000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: #FFFF00;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    color: black;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.volver-form {
+    width: 33.33%;
+}
+
+.historial-title {
+    text-align: left;
+    margin-left: 20px;
+    width: 66.67%;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px; 
+}
+
+form#filterForm label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    width: 150px;
+}
+
+select option {
+    background-color: #333;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFFF00;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    background-color: #444;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+}
