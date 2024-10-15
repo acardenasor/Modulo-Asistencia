@@ -1,0 +1,75 @@
+[
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "12345678",
+            "nombre": "Juan Perez",
+            "curso": "CURS001"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "87654321",
+            "nombre": "Maria Gomez",
+            "curso": "CURS001"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "12345679",
+            "nombre": "Juan Molina",
+            "curso": "CURS001"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "87654322",
+            "nombre": "Carlos Hernandez",
+            "curso": "CURS002"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "87654323",
+            "nombre": "Ana Lopez",
+            "curso": "CURS002"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "12345680",
+            "nombre": "Luis Fernandez",
+            "curso": "CURS002"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "87654324",
+            "nombre": "Claudia Ramirez",
+            "curso": "CURS003"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "12345681",
+            "nombre": "Pedro Jimenez",
+            "curso": "CURS003"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Estudiante",
+        "fields": {
+            "id_estudiante": "87654325",
+            "nombre": "Laura Gutierrez",
+            "curso": "CURS003"
+        }
+    }
+]
+

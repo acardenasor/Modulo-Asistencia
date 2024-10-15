@@ -1,0 +1,41 @@
+[
+    {
+        "model": "auth.User",
+        "fields": {
+            "username": "asistente1",
+            "password": "pbkdf2_sha256$870000$XudBdVSxyOubvYOF992Gq6$TDwli8k237mqsgeZ+VaNkxPF58Dq8asauAHsbVo+alw=",
+            "first_name": "Asistente",
+            "last_name": "Uno",
+            "email": "asistente1@example.com",
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "auth.User",
+        "fields": {
+            "username": "asistente2",
+            "password": "pbkdf2_sha256$870000$gDAfMkPSLIyL5XchWIKvbl$wzk1ASiYeX2Q/gK4o3Jw/l2Cc/vm8PDNre2kXPXphFQ=",
+            "first_name": "Asistente",
+            "last_name": "Dos",
+            "email": "asistente2@example.com",
+            "is_superuser": false,
+            "is_staff": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "auth.User",
+        "fields": {
+            "username": "admin",
+            "password": "pbkdf2_sha256$870000$dAHShZxZGrWXzOidK7JJR4$a4YkEwjO59Q9vvAyIOGNUNMhyrs10nE0iKLP0DczT9s=",
+            "first_name": "Admin",
+            "last_name": "User",
+            "email": "admin@example.com",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true
+        }
+    }
+]

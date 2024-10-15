@@ -1,0 +1,147 @@
+[
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345678",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654321",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345679",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345678",
+            "fecha": "2024-10-11",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654321",
+            "fecha": "2024-10-11",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345679",
+            "fecha": "2024-10-11",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654322",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654323",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345680",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654322",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654323",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345680",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654324",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345681",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654325",
+            "fecha": "2024-10-07",
+            "estado_asistencia": "Presente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654324",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "12345681",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Ausente"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Asistencia",
+        "fields": {
+            "estudiante": "87654325",
+            "fecha": "2024-10-09",
+            "estado_asistencia": "Presente"
+        }
+    }
+    
+]

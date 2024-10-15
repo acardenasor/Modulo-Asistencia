@@ -1,0 +1,23 @@
+[
+    {
+        "model": "asistencia_estudiantil.Curso",
+        "fields": {
+            "codigo_curso": "CURS001",
+            "nombre_curso": "Matemáticas"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Curso",
+        "fields": {
+            "codigo_curso": "CURS002",
+            "nombre_curso": "Historia"
+        }
+    },
+    {
+        "model": "asistencia_estudiantil.Curso",
+        "fields": {
+            "codigo_curso": "CURS003",
+            "nombre_curso": "Ciencias"
+        }
+    }
+]
