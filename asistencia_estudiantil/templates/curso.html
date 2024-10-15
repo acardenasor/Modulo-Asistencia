@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de {{ curso.nombre_curso }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'asistencia_estudiantil/styles/style_curso.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, {{ username }}</h1>
+    </header>
+
+    <h1>Curso de {{ curso.nombre_curso }}</h1>
+
+    <h2>Lista de estudiantes</h2>
+    <table>
+        <tr>
+            <th>Estudiante</th>
+            <th>Cédula</th>
+        </tr>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante.nombre }}</td>
+            <td>{{ estudiante.id_estudiante }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="button-container">
+        <form method="post" action="{% url 'lista_estudiantes_curso' curso.codigo_curso %}">
+            {% csrf_token %}
+            <button type="submit">Registrar asistencia</button>
+        </form>
+        <form method="post" action="{% url 'asistencia_curso' curso.codigo_curso %}">
+            {% csrf_token %}
+            <button type="submit">Ver historial del curso</button>
+        </form>
+        <form method="post" action="{% url 'cursos' %}">
+            {% csrf_token %}
+            <button type="submit">Volver a lista de cursos</button>
+        </form>
+    </div>
+</body>
+</html>
